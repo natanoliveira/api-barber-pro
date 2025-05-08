@@ -12,19 +12,19 @@ export class User {
     id: number;
 
     @ApiProperty({ description: 'Nome' })
-    @Column({ nullable: true })
+    @Column()
     name: string;
 
     @ApiProperty({ nullable: true, description: 'Seu melhor e-mail', example: 'email@gmail.com' })
-    @Column({ nullable: true })
-    email?: string;
+    @Column({ unique: true })
+    email: string;
 
     @ApiProperty({ nullable: true, description: 'Endereço com número, bairro, cep, cidade, estado' })
     @Column({ nullable: true })
     endereco?: string;
 
     @ApiProperty()
-    @Column()
+    @Column({ name: 'passwordHash' })
     password: string;
 
     @ApiProperty({ nullable: true })

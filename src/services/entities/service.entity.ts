@@ -17,9 +17,6 @@ export class Service {
     @Column({ type: 'datetime', name: 'updated_at', onUpdate: 'CURRENT_TIMESTAMP()' })
     updatedAt?: Date;
 
-    @Column({ name: 'haircut_id' })
-    haircutId: string;
-
     @ManyToOne(() => Haircut, haircut => haircut.services)
     @JoinColumn({ name: 'haircut_id' })
     haircut: Haircut;

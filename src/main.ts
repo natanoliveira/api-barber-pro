@@ -78,7 +78,7 @@ async function bootstrap() {
       tokens['date'] = dateTime;
 
       return [
-        '[REQ Front-barber-pro]',
+        '[REQ barber-pro]',
         tokens.date,
         tokens.method(req, res),
         tokens.url(req, res),

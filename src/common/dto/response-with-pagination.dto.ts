@@ -1,4 +1,4 @@
-export class ResponseUsersDto<T> {
+export class ResponseWithPaginationDto<T> {
     data: T[];
     meta: {
         totalItems: number;
